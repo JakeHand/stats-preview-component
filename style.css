@@ -1,0 +1,141 @@
+/* Mobile first workflow */
+/* Layout */
+html {
+    background-color: hsl(233, 47%, 7%);
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    font-family: 'Inter';
+}
+
+body {
+    display: grid;
+    place-content: center;
+}
+
+main,
+#mobile-img-container {
+    width: 21rem;
+}
+
+main {
+    background-color: hsl(244, 38%, 16%);
+    border-radius: 0.5rem;
+    margin: 3rem 0;
+}
+
+#mobile-img-container,
+#desktop-img-container {
+    background-size: cover;
+    background-color: hsl(277, 35%, 40%);
+    background-blend-mode: overlay;
+}
+
+#mobile-img-container {
+    height: 15rem;
+    background-image: url('./images/image-header-mobile.jpg');
+    margin: 0 auto;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+/* Content */
+#content {
+    padding: 1.3rem 1.7rem;
+}
+
+h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+span {
+    color:hsl(277, 64%, 61%);
+}
+
+#main-paragraph {
+    color: hsla(0, 0%, 100%, 0.75);
+    font-weight: 400;
+    line-height: 1.5rem;
+    margin-bottom: 2.8rem;
+}
+
+#main-paragraph,
+.stat-heading {
+    font-family: 'Lexend Deca';
+}
+
+.stat-number {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.stat-heading {
+    text-transform: uppercase;
+    color: hsla(0, 0%, 100%, 0.6);
+    margin: 0.5rem 0 1.8rem;
+    font-size: 0.8rem;
+}
+
+/* >480px viewing */
+@media only screen and (min-width: 480px) {
+    /* Layout */
+    html {
+        text-align: left;
+    }
+
+    #mobile-img-container {
+        display: none;
+    }
+
+    body {
+        min-height: 100vh;
+    }
+
+    main {
+        display: flex;
+        width: 80rem;
+        height: 32rem;
+    }
+
+    #content-container {
+        width: 100%;
+    }
+
+    #content {
+        padding: 2.8rem 7.3rem 0 5rem;
+    }
+
+    #desktop-img-container {
+        background-image: url('./images/image-header-desktop.jpg');
+        border-radius: 0 0.5rem 0.5rem 0;
+        width: 95%;
+        margin-right: 0;
+    }
+
+    /* Content */
+    h1 {
+        font-size: 2.6rem;
+    }
+
+    #main-paragraph {
+        line-height: 1.8rem;
+        padding: 0.4rem 1rem 0.6rem 0;
+        letter-spacing: 0.02rem;
+    }
+
+    #stats-container {
+        display: flex;
+        width: 88%;
+        justify-content: space-between;
+    }
+
+    .stat-number {
+        font-size: 1.6rem;
+    }
+
+    .stat-heading {
+        font-size: 0.9rem;
+        letter-spacing: 0.02rem;
+    }
+}
